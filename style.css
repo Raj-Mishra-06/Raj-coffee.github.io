@@ -287,6 +287,7 @@ body {
   @media screen and (max-width: 768px) {
     .about-content {
       width: 90%; /* Adjust the width for smaller screens */
+      height: auto;
     }
   }
   
