@@ -115,7 +115,8 @@ body {
   height: auto;
   z-index: 2;
   opacity: 0;
-  background-color: #0000002f;
+  background-color: transparent;
+  backdrop-filter: blur(4px);
   animation: imageAnimation 5s infinite;
   margin-bottom: 20px; /* Add space between the text and image */
 }
@@ -161,8 +162,8 @@ body {
 
   .left-image {
     top: 10px;
-    left: 50px;
-    width: 130px;
+    left: 70px;
+    width: 150px;
   }
 
   .parallax-content h1 {
@@ -226,8 +227,8 @@ body {
   /* Media query for small screens */
   @media screen and (max-width: 768px) {
     .top-nav {
-      width: 90%; /* Adjust the width for small screens */
-      left: 10%; /* Adjust the left position to center the panel */
+      width: fit-content; /* Adjust the width for small screens */
+      left: auto; /* Adjust the left position to center the panel */
     }
   }
   
@@ -255,21 +256,21 @@ body {
  /* About Section */
 .about-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    font-family: cursive;
     height: 65%;
     width: 50;
     color: #ffffff;
     padding: 2rem;
     text-align: center;
-    z-index: -1;
-    backdrop-filter: blur(5px); /* Apply blur effect to create glassmorphism */
+    backdrop-filter: blur(8px); /* Apply blur effect to create glassmorphism */
     background-color: rgba(24, 24, 24, 0.1); /* Set background color with transparency */
     border-radius: 40px; /* Add border radius for curved edges */
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Add shadow for depth */
     margin-bottom: 200px; /* Add space at the bottom */
-    margin-top: 130px; /* Add space at the top */
+    margin-top: 160px; /* Add space at the top */
   }
   
   .about-content h2 {
@@ -286,8 +287,9 @@ body {
   /* Media Queries */
   @media screen and (max-width: 768px) {
     .about-content {
+      margin-top: 240px;
       width: 90%; /* Adjust the width for smaller screens */
-      height: auto;
+      height:fit-content;
     }
   }
   
@@ -313,6 +315,10 @@ body {
     background-color: transparent;
   }
   
+  .menu-card{
+    margin-top: 120px;
+    margin-bottom: 80px;
+  }
   .menu-card img {
     width: 60%; /* Adjust the width to fit the carousel container */
     height: auto;
@@ -355,7 +361,7 @@ body {
   }
   
   .blog-card:hover {
-    transform: translateY(-5px); /* Apply a slight upward translation on hover */
+    transform: translateY(-30px); /* Apply a slight upward translation on hover */
   }
   
   .blog-card img {
