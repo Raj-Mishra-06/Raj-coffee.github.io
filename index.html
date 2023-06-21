@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Shop</title>
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JavaScript Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="script.js"></script>
+
+  <style>
+    /* Add your custom styles here */
+  </style>
+</head>
+
+<body>
+  <!-- Home Section -->
+<section id="home" class="parallax-section">
+  <!-- Parallax background image and animated text -->
+  <div class="parallax-background"></div>
+  <div class="parallax-content">
+    <div class="content-wrapper">
+      <img src="image/logo1.png" class="left-image" alt="Coffee Image">
+      <h1 class="animate-fade-in-down">Welcome to Our Coffee Shop</h1>
+    </div>
+
+    <!-- Navigation panel -->
+    <nav class="top-nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#order">Order</a></li>
+      </ul>
+    </nav>
+  </div>
+</section>
+
+
+  <section id="about" class="parallax-section">
+    <div class="parallax-background"></div>
+    <div class="parallax-content">
+      <div class="about-content">
+        <div class="about-text">
+            <h2>About Us</h2>
+            <p>Welcome to Our Coffee Shop!</p>
+            <p>We are passionate about delivering the finest coffee experience to our customers. With our carefully selected beans, expertly crafted brews, and cozy ambiance, we strive to create a welcoming environment where coffee lovers can indulge in their favorite beverage.</p>
+            <p>Our team of skilled baristas is dedicated to serving you the perfect cup of coffee every time. We source our beans from sustainable and ethical suppliers, ensuring the highest quality and supporting the communities that produce them.</p>
+          </div>          
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <section id="menu">
+    <div class="menu-carousel">
+      <div class="menu-card">
+        <img src="image/menu2.webp" alt="Coffee 1">
+        <!-- Add more menu cards as needed -->
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Blog Section -->
+  <section id="blog">
+    <div class="blog-cards">
+      <div class="blog-card">
+        <img src="image/night1.jpg" alt="Customer 1">
+        <h3>Customer Review 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at semper nisi.</p>
+      </div>
+      <div class="blog-card">
+        <img src="image/night2.jpg" alt="Customer 2">
+        <h3>Customer Review 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at semper nisi.</p>
+      </div>
+      <!-- Add more blog cards as needed -->
+    </div>
+  </section>
+
+  <!-- Order Section -->
+  <section id="order" class="glassmorphism">
+    <div class="order-form">
+      <h2>Place Your Order</h2>
+      <form action="#" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+
+        <label for="coffee">Coffee Selection:</label>
+        <select id="coffee" name="coffee" required>
+          <option value="coffee1">Coffee 1</option>
+          <option value="coffee2">Coffee 2</option>
+          <!-- Add more options as needed -->
+        </select>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" required>
+
+        <button type="submit">Place Order</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+<footer>
+  <div class="social-icons">
+    <a href="#" class="fab fa-instagram"></a>
+    <a href="#" class="fab fa-twitter"></a>
+    <a href="https://www.linkedin.com/in/rajmishra" class="fab fa-linkedin"></a>
+    <a href="https://medium.com/@your-username" class="fab fa-medium"></a>
+  </div>
+  <p>&copy; 2023 Raj Mishra. All rights reserved.</p>
+</footer>
+</body>
+
+</html>

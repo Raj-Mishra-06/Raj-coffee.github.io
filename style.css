@@ -1,0 +1,463 @@
+/* Global Styles */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Section Styles */
+
+#home {
+  background-image: url('image/shop2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Add fixed background attachment */
+}
+
+#about {
+  background-image: url('image/about.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Add fixed background attachment */
+}
+
+#menu {
+  background-image: url('image/menu1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Add fixed background attachment */
+}
+
+#blog {
+  background-image: url('image/review.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Add fixed background attachment */
+}
+
+#order {
+  background-image: url('image/order.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Add fixed background attachment */
+}
+
+.parallax-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.parallax-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  transform: translateZ(0); /* Add hardware acceleration for smoother parallax effect */
+}
+
+.parallax-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.parallax-section .parallax-content {
+  position: relative;
+  z-index: 1;
+}
+
+.parallax-content {
+  position: relative;
+  display: flex;
+  top: 50px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-bottom: 60px;
+  color: #ffffff;
+}
+
+.parallax-content h1 {
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  font-size: 4rem;
+  font-family: cursive;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  margin-bottom: 40px; /* Adjust the margin-bottom to create space */
+}
+
+.left-image {
+  position: relative;
+  top: 20px; /* Adjust the top position to move it above the text */
+  left: 60px;
+  transform: translate(-50%, -50%);
+  width: 200px; /* Adjust the width as needed */
+  height: auto;
+  z-index: 2;
+  opacity: 0;
+  background-color: #0000002f;
+  animation: imageAnimation 5s infinite;
+  margin-bottom: 20px; /* Add space between the text and image */
+}
+
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 1s ease-in-out;
+  animation-fill-mode: forwards; /* Keep the final state of the animation */
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.parallax-content .content-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .parallax-content {
+    top: 20px;
+  }
+
+  .left-image {
+    top: 10px;
+    left: 50px;
+    width: 100px;
+  }
+
+  .parallax-content h1 {
+    left: 50px;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+}
+
+  
+  
+  
+
+  .top-nav {
+    position: fixed;
+    top: 20px; /* Adjust the top position to add space */
+    left: 25%; /* Adjust the left position to center the panel */
+    width: 50%;
+    height: 7%;
+    background-color: rgba(4, 4, 4, 0.705);
+    backdrop-filter: blur(8px);
+    font-weight: bold;
+    z-index: 2000; /* Increase the z-index to bring the navigation panel above the about glasmorphism */
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: center; /* Center the panel contents */
+    align-items: center; /* Vertically center the content */
+    border-radius: 20px; /* Add border radius for curved edges */
+    margin: 0 auto; /* Center the panel horizontally */
+    overflow: hidden; /* Prevent content overflow on small screens */
+  }
+  
+  
+  /* Rest of the CSS remains the same */
+  
+  .top-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center the navigation links */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .top-nav ul li {
+    margin-right: 1rem;
+  }
+  
+  .top-nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0.5rem;
+    transition: background-color 0.3s; /* Add transition for hover effect */
+  }
+  
+  .top-nav ul li a:hover {
+    border-radius: 10px;
+    color: rgb(53, 4, 4);
+    background-color: #ffffff78; /* Apply hover background color */
+  }
+  
+  /* Media query for small screens */
+  @media screen and (max-width: 768px) {
+    .top-nav {
+      width: 90%; /* Adjust the width for small screens */
+      left: 5%; /* Adjust the left position to center the panel */
+    }
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0.5rem;
+  }
+  
+  .social-icons a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #777;
+  }
+  
+  
+  
+  
+ /* About Section */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 65%;
+    width: 50;
+    color: #ffffff;
+    padding: 2rem;
+    text-align: center;
+    z-index: -1;
+    backdrop-filter: blur(5px); /* Apply blur effect to create glassmorphism */
+    background-color: rgba(24, 24, 24, 0.1); /* Set background color with transparency */
+    border-radius: 40px; /* Add border radius for curved edges */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Add shadow for depth */
+    margin-bottom: 200px; /* Add space at the bottom */
+    margin-top: 130px; /* Add space at the top */
+  }
+  
+  .about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-content p {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Media Queries */
+  @media screen and (max-width: 768px) {
+    .about-content {
+      width: 90%; /* Adjust the width for smaller screens */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .about-content {
+      padding: 1rem; /* Adjust the padding for smaller screens */
+      font-size: 1rem; /* Adjust the font size for smaller screens */
+    }
+  }
+  
+  
+  
+  
+  
+  .menu-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+  }
+  
+  #menu {
+    background-color: transparent;
+  }
+  
+  .menu-card img {
+    width: 60%; /* Adjust the width to fit the carousel container */
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    object-fit: cover; /* Ensure the image fills the container without distortion */
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+    transition: transform 0.3s;
+  }
+  
+  
+  .menu-card:hover img {
+    transform: scale(1.1);
+  }
+  
+
+  
+  
+  /* Blog Section */
+
+.blog-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 4rem 0;
+  }
+  
+  .blog-card {
+    position: relative;
+    max-width: 300px;
+    background-color:rgba(0, 0, 0, 0.68);
+    margin: 1rem;
+    border-radius: 50px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
+    transition: transform 0.3s ease; /* Add transition for the hover effect */
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-5px); /* Apply a slight upward translation on hover */
+  }
+  
+  .blog-card img {
+    max-width: 60%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 0.5rem; /* Adjust the margin to reduce the space below the image */
+  }
+  
+  .blog-card h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .blog-card p {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+  }
+  
+  
+  /* Order Section */
+  
+  .glassmorphism {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    padding: 4rem 0;
+  }
+  
+  .order-form {
+    max-width: 400px;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .order-form h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .order-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .order-form label {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .order-form input,
+  .order-form select {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #777;
+  }
+  
+  .order-form button {
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .order-form button:hover {
+    background-color: #777;
+  }
+  
+  /* Footer Section */
+  
+  footer {
+    background-color: #333;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .footer .social-icons a {
+    color: #fff;
+    margin-right: 1rem;
+    transition: color 0.3s;
+  }
+  
+  .footer .social-icons a:hover {
+    color: #777;
+  }
+  
+  /* Animations */
+  
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
