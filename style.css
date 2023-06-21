@@ -162,7 +162,7 @@ body {
   .left-image {
     top: 10px;
     left: 50px;
-    width: 100px;
+    width: 130px;
   }
 
   .parallax-content h1 {
@@ -227,7 +227,7 @@ body {
   @media screen and (max-width: 768px) {
     .top-nav {
       width: 90%; /* Adjust the width for small screens */
-      left: 5%; /* Adjust the left position to center the panel */
+      left: 10%; /* Adjust the left position to center the panel */
     }
   }
   
